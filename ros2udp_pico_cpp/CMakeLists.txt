@@ -45,8 +45,12 @@ pico_enable_stdio_uart(ros2udp_pico_cpp 0)
 pico_enable_stdio_usb(ros2udp_pico_cpp 1)
 
 # Add the standard library to the build
-target_link_libraries(ros2udp_pico_cpp
-        pico_stdlib)
+target_link_libraries(
+    ros2udp_pico_cpp
+    pico_stdlib
+    cyw43_driver
+    lwip
+    )
 
 # Add the standard include files to the build
 target_include_directories(ros2udp_pico_cpp PRIVATE
