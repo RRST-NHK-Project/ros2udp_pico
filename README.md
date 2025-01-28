@@ -1,8 +1,8 @@
 # ros2udp_pico
-ros2_udpのPico W 用コード群  
+ros2udpのPico W 用コード群  
 
 ## 概要 
-ros2_udpパッケージからUDPで送信されたデータをPico Wで受信するコード群です。  
+ros2udpパッケージからUDPで送信されたデータをPico Wで受信するコード群です。  
 
 
 ## 使い方
