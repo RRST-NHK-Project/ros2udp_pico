@@ -33,7 +33,8 @@ try:
         # データを受信
         buffer, addr = sock.recvfrom(1024)  # 最大1024バイトを受信
         buffer = buffer.decode("utf-8")
-        data = buffer.split(",")
+        str_data = buffer.split(",")
+        data = list(map(float,str_data))
         led.toggle()
         print(data)
 
