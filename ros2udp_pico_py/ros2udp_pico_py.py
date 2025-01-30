@@ -11,7 +11,7 @@ SUBNET_MASK = "255.255.255.0"
 GATEWAY = "192.168.8.1"
 DNS = "192.168.8.1"
 
-data = [0,0,0,0,0,0,0,0,0]
+data = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
 
 led = Pin("LED", Pin.OUT)  # LED
 
@@ -31,10 +31,10 @@ sock.bind((SRC_IP, SRC_PORT))  # バインド
 try:
     while True:
         # データを受信
-        buffer, addr = sock.recvfrom(1024)  # 最大1024バイトを受信
+        buffer, addr = sock.recvfrom(128) 
         buffer = buffer.decode("utf-8")
         str_data = buffer.split(",")
-        data = list(map(float,str_data))
+        data = list(map(int,str_data))
         led.toggle()
         print(data)
 
