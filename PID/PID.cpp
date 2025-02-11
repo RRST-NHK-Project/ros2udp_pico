@@ -3,16 +3,46 @@
 #include "hardware/pwm.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h>
 
-// エンコーダに使用するGPIOピンの定義
-constexpr uint ENCODER_A_PIN = 14;
-constexpr uint ENCODER_B_PIN = 15;
+// モタドラに使用するGPIOピンの定義
+constexpr uint MD1P = 0;
+constexpr uint MD2P = 1;
+constexpr uint MD3P = 2;
+constexpr uint MD4P = 3;
+constexpr uint MD5P = 4;
+constexpr uint MD6P = 5;
+constexpr uint MD1D = 6;
+constexpr uint MD2D = 7;
+constexpr uint MD3D = 8;
+constexpr uint MD4D = 9;
+constexpr uint MD5D = 27;
+constexpr uint MD6D = 28;
+//エンコーダー
+constexpr uint ENC1_A = 14;
+constexpr uint ENC1_B = 15;
+constexpr uint ENC2_A = 16;
+constexpr uint ENC2_B = 17;
+constexpr uint ENC3_A = 18;
+constexpr uint ENC3_B = 19;
+constexpr uint ENC4_A = 20;
+constexpr uint ENC4_B = 21;
+//サーボ
+constexpr uint SERVO1 = 10;
+constexpr uint SERVO2 = 11;
+constexpr uint SERVO3 = 12;
+constexpr uint SERVO4 = 13;
+//通信
+constexpr uint I2C_SDA = 4;
+constexpr uint I2C_SCL = 5;
+
 
 // エンコーダのカウント値（符号付き整数）
 volatile int32_t encoder_count = 0;
 // 前回の A, B の状態（2ビットで表現）
 volatile uint8_t lastEncoded = 0;
-
+//デューティ
+int duty;
 // PID用の変数（位置型 PID制御）
 double target = 360.0;  // 目標角度（例: 360°）
 double deg = 0.0;       // 現在の角度
@@ -33,8 +63,8 @@ double dt_d = 0.0;
 // エンコーダの状態変化を処理するIRQコールバック関数
 void gpio_callback(uint gpio, uint32_t events) {
     // 現在の A, B の状態を取得
-    uint8_t a = gpio_get(ENCODER_A_PIN);
-    uint8_t b = gpio_get(ENCODER_B_PIN);
+    uint8_t a = gpio_get(ENC1_A);
+    uint8_t b = gpio_get(ENC1_B);
     uint8_t encoded = (a << 1) | b;  // 2ビットの状態
     // 4ビットの状態遷移として判定（前回状態 << 2 | 現在の状態）
     uint8_t sum = (lastEncoded << 2) | encoded;
@@ -75,33 +105,33 @@ int main() {
     uint channel = pwm_gpio_to_channel(PWM_PIN);
 
     // PWM周期（ラップ値）の設定
-    // ここでは 8 ビット分解能の例として 0～255 の範囲になるように設定
+    // ここでは １６ビット分解能の例として 0～65535 の範囲になるように設定
     pwm_set_wrap(slice_num, 65535);
 
     // PWM出力を有効化
     pwm_set_enabled(slice_num, true);
 
     // エンコーダ A相用GPIOの初期化（入力モード、内部プルアップ有効）
-    gpio_init(ENCODER_A_PIN);
-    gpio_set_dir(ENCODER_A_PIN, GPIO_IN);
-    gpio_pull_up(ENCODER_A_PIN);
+    gpio_init(ENC1_A);
+    gpio_set_dir(ENC1_A, GPIO_IN);
+    gpio_pull_up(ENC1_A);
 
     // エンコーダ B相用GPIOの初期化（入力モード、内部プルアップ有効）
-    gpio_init(ENCODER_B_PIN);
-    gpio_set_dir(ENCODER_B_PIN, GPIO_IN);
-    gpio_pull_up(ENCODER_B_PIN);
+    gpio_init(ENC1_B);
+    gpio_set_dir(ENC1_B, GPIO_IN);
+    gpio_pull_up(ENC1_B);
 
     // A相に対してIRQコールバックを登録
-    gpio_set_irq_enabled_with_callback(ENCODER_A_PIN,
+    gpio_set_irq_enabled_with_callback(ENC1_A,
                                        GPIO_IRQ_EDGE_RISE | GPIO_IRQ_EDGE_FALL,
                                        true, gpio_callback);
     // B相もエッジ検出する（A相で登録したコールバックが呼ばれます）
-    gpio_set_irq_enabled(ENCODER_B_PIN,
+    gpio_set_irq_enabled(ENC1_B,
                          GPIO_IRQ_EDGE_RISE | GPIO_IRQ_EDGE_FALL,
                          true);
 
     // 初期状態の保存
-    lastEncoded = ((gpio_get(ENCODER_A_PIN) << 1) | gpio_get(ENCODER_B_PIN));
+    lastEncoded = ((gpio_get(ENC1_A) << 1) | gpio_get(ENC1_B));
 
     // PIDループ用のタイマー開始
     absolute_time_t last_time = get_absolute_time();
@@ -123,11 +153,19 @@ int main() {
 
         // PID計算（台形則による積分計算をそのまま使用）
         Error = target - deg;
+        
         Integral += (Error + last_Error) * dt_d / 2.0;
         Differential = (Error - last_Error) / dt_d;
         // 各サンプリングごとにPID出力を再計算
         Output = (Kp * Error) + (Ki * Integral) + (Kd * Differential);
         last_Error = Error;
+        if (fabs(Error) < 1.5){
+            Output = 0;
+        }
+        
+        //モーター動かす
+        duty = Output*65535;
+        pwm_set_chan_level(slice_num, channel, duty);
 
         // 安全のため、出力値に対して上限を設ける
         double pid_output = Output;

@@ -46,7 +46,9 @@ pico_enable_stdio_usb(PID 1) #0->1に変更しました
 
 # Add the standard library to the build
 target_link_libraries(PID
-        pico_stdlib)
+        pico_stdlib
+        hardware_pwm    # 追加：PWM用ヘッダー (hardware/pwm.h) を利用するため
+        )
 
 # Add the standard include files to the build
 target_include_directories(PID PRIVATE

@@ -1,0 +1,208 @@
+[0.076s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.076s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=8, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x758efab6e0f0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x758efab6ea80>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x758efab6ea80>>)
+[0.103s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.104s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.104s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.104s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.104s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.104s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.104s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/imori/ros2udp_pico'
+[0.104s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.104s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.104s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.104s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.104s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.104s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.104s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.104s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.104s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.122s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.122s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.122s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.122s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.122s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.122s] Level 1:colcon.colcon_core.package_identification:_identify(PID) by extensions ['ignore', 'ignore_ament_install']
+[0.122s] Level 1:colcon.colcon_core.package_identification:_identify(PID) by extension 'ignore'
+[0.123s] Level 1:colcon.colcon_core.package_identification:_identify(PID) by extension 'ignore_ament_install'
+[0.123s] Level 1:colcon.colcon_core.package_identification:_identify(PID) by extensions ['colcon_pkg']
+[0.123s] Level 1:colcon.colcon_core.package_identification:_identify(PID) by extension 'colcon_pkg'
+[0.123s] Level 1:colcon.colcon_core.package_identification:_identify(PID) by extensions ['colcon_meta']
+[0.123s] Level 1:colcon.colcon_core.package_identification:_identify(PID) by extension 'colcon_meta'
+[0.123s] Level 1:colcon.colcon_core.package_identification:_identify(PID) by extensions ['ros']
+[0.123s] Level 1:colcon.colcon_core.package_identification:_identify(PID) by extension 'ros'
+[0.123s] Level 1:colcon.colcon_core.package_identification:_identify(PID) by extensions ['cmake', 'python']
+[0.123s] Level 1:colcon.colcon_core.package_identification:_identify(PID) by extension 'cmake'
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(PID) by extension 'python'
+[0.136s] DEBUG:colcon.colcon_core.package_identification:Package 'PID' with type 'cmake' and name 'PID'
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(PWM) by extensions ['ignore', 'ignore_ament_install']
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(PWM) by extension 'ignore'
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(PWM) by extension 'ignore_ament_install'
+[0.136s] Level 1:colcon.colcon_core.package_identification:_identify(PWM) by extensions ['colcon_pkg']
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(PWM) by extension 'colcon_pkg'
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(PWM) by extensions ['colcon_meta']
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(PWM) by extension 'colcon_meta'
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(PWM) by extensions ['ros']
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(PWM) by extension 'ros'
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(PWM) by extensions ['cmake', 'python']
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(PWM) by extension 'cmake'
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(PWM) by extension 'python'
+[0.148s] DEBUG:colcon.colcon_core.package_identification:Package 'PWM' with type 'cmake' and name 'PWM'
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(QEI_py) by extensions ['ignore', 'ignore_ament_install']
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(QEI_py) by extension 'ignore'
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(QEI_py) by extension 'ignore_ament_install'
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(QEI_py) by extensions ['colcon_pkg']
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(QEI_py) by extension 'colcon_pkg'
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(QEI_py) by extensions ['colcon_meta']
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(QEI_py) by extension 'colcon_meta'
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(QEI_py) by extensions ['ros']
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(QEI_py) by extension 'ros'
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(QEI_py) by extensions ['cmake', 'python']
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(QEI_py) by extension 'cmake'
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(QEI_py) by extension 'python'
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(QEI_py) by extensions ['python_setup_py']
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(QEI_py) by extension 'python_setup_py'
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(blink_cpp) by extensions ['ignore', 'ignore_ament_install']
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(blink_cpp) by extension 'ignore'
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(blink_cpp) by extension 'ignore_ament_install'
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(blink_cpp) by extensions ['colcon_pkg']
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(blink_cpp) by extension 'colcon_pkg'
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(blink_cpp) by extensions ['colcon_meta']
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(blink_cpp) by extension 'colcon_meta'
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(blink_cpp) by extensions ['ros']
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(blink_cpp) by extension 'ros'
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(blink_cpp) by extensions ['cmake', 'python']
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(blink_cpp) by extension 'cmake'
+[0.150s] Level 1:colcon.colcon_core.package_identification:_identify(blink_cpp) by extension 'python'
+[0.150s] DEBUG:colcon.colcon_core.package_identification:Package 'blink_cpp' with type 'cmake' and name 'blink_cpp'
+[0.150s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.150s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.150s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.150s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.150s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.150s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.150s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.150s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.150s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(pico-mcp2515-main) by extensions ['ignore', 'ignore_ament_install']
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(pico-mcp2515-main) by extension 'ignore'
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(pico-mcp2515-main) by extension 'ignore_ament_install'
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(pico-mcp2515-main) by extensions ['colcon_pkg']
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(pico-mcp2515-main) by extension 'colcon_pkg'
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(pico-mcp2515-main) by extensions ['colcon_meta']
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(pico-mcp2515-main) by extension 'colcon_meta'
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(pico-mcp2515-main) by extensions ['ros']
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(pico-mcp2515-main) by extension 'ros'
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(pico-mcp2515-main) by extensions ['cmake', 'python']
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(pico-mcp2515-main) by extension 'cmake'
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(pico-mcp2515-main) by extension 'python'
+[0.152s] DEBUG:colcon.colcon_core.package_identification:Package 'pico-mcp2515-main' with type 'cmake' and name 'pico-mcp2515'
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(read) by extensions ['ignore', 'ignore_ament_install']
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(read) by extension 'ignore'
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(read) by extension 'ignore_ament_install'
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(read) by extensions ['colcon_pkg']
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(read) by extension 'colcon_pkg'
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(read) by extensions ['colcon_meta']
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(read) by extension 'colcon_meta'
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(read) by extensions ['ros']
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(read) by extension 'ros'
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(read) by extensions ['cmake', 'python']
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(read) by extension 'cmake'
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(read) by extension 'python'
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(read) by extensions ['python_setup_py']
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(read) by extension 'python_setup_py'
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(read/pico-mcp2515) by extensions ['ignore', 'ignore_ament_install']
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(read/pico-mcp2515) by extension 'ignore'
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(read/pico-mcp2515) by extension 'ignore_ament_install'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(read/pico-mcp2515) by extensions ['colcon_pkg']
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(read/pico-mcp2515) by extension 'colcon_pkg'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(read/pico-mcp2515) by extensions ['colcon_meta']
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(read/pico-mcp2515) by extension 'colcon_meta'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(read/pico-mcp2515) by extensions ['ros']
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(read/pico-mcp2515) by extension 'ros'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(read/pico-mcp2515) by extensions ['cmake', 'python']
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(read/pico-mcp2515) by extension 'cmake'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(read/pico-mcp2515) by extension 'python'
+[0.153s] DEBUG:colcon.colcon_core.package_identification:Package 'read/pico-mcp2515' with type 'cmake' and name 'pico-mcp2515'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(ros2udp_pico_16) by extensions ['ignore', 'ignore_ament_install']
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(ros2udp_pico_16) by extension 'ignore'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(ros2udp_pico_16) by extension 'ignore_ament_install'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(ros2udp_pico_16) by extensions ['colcon_pkg']
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(ros2udp_pico_16) by extension 'colcon_pkg'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(ros2udp_pico_16) by extensions ['colcon_meta']
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(ros2udp_pico_16) by extension 'colcon_meta'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(ros2udp_pico_16) by extensions ['ros']
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(ros2udp_pico_16) by extension 'ros'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(ros2udp_pico_16) by extensions ['cmake', 'python']
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(ros2udp_pico_16) by extension 'cmake'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(ros2udp_pico_16) by extension 'python'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(ros2udp_pico_16) by extensions ['python_setup_py']
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(ros2udp_pico_16) by extension 'python_setup_py'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(ros2udp_pico_cpp) by extensions ['ignore', 'ignore_ament_install']
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(ros2udp_pico_cpp) by extension 'ignore'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(ros2udp_pico_cpp) by extension 'ignore_ament_install'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(ros2udp_pico_cpp) by extensions ['colcon_pkg']
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(ros2udp_pico_cpp) by extension 'colcon_pkg'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(ros2udp_pico_cpp) by extensions ['colcon_meta']
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(ros2udp_pico_cpp) by extension 'colcon_meta'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(ros2udp_pico_cpp) by extensions ['ros']
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(ros2udp_pico_cpp) by extension 'ros'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(ros2udp_pico_cpp) by extensions ['cmake', 'python']
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(ros2udp_pico_cpp) by extension 'cmake'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(ros2udp_pico_cpp) by extension 'python'
+[0.155s] DEBUG:colcon.colcon_core.package_identification:Package 'ros2udp_pico_cpp' with type 'cmake' and name 'ros2udp_pico_cpp'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(ros2udp_pico_py) by extensions ['ignore', 'ignore_ament_install']
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(ros2udp_pico_py) by extension 'ignore'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(ros2udp_pico_py) by extension 'ignore_ament_install'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(ros2udp_pico_py) by extensions ['colcon_pkg']
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(ros2udp_pico_py) by extension 'colcon_pkg'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(ros2udp_pico_py) by extensions ['colcon_meta']
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(ros2udp_pico_py) by extension 'colcon_meta'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(ros2udp_pico_py) by extensions ['ros']
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(ros2udp_pico_py) by extension 'ros'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(ros2udp_pico_py) by extensions ['cmake', 'python']
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(ros2udp_pico_py) by extension 'cmake'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(ros2udp_pico_py) by extension 'python'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(ros2udp_pico_py) by extensions ['python_setup_py']
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(ros2udp_pico_py) by extension 'python_setup_py'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(write) by extensions ['ignore', 'ignore_ament_install']
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(write) by extension 'ignore'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(write) by extension 'ignore_ament_install'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(write) by extensions ['colcon_pkg']
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(write) by extension 'colcon_pkg'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(write) by extensions ['colcon_meta']
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(write) by extension 'colcon_meta'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(write) by extensions ['ros']
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(write) by extension 'ros'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(write) by extensions ['cmake', 'python']
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(write) by extension 'cmake'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(write) by extension 'python'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(write) by extensions ['python_setup_py']
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(write) by extension 'python_setup_py'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(write/pico-mcp2515) by extensions ['ignore', 'ignore_ament_install']
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(write/pico-mcp2515) by extension 'ignore'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(write/pico-mcp2515) by extension 'ignore_ament_install'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(write/pico-mcp2515) by extensions ['colcon_pkg']
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(write/pico-mcp2515) by extension 'colcon_pkg'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(write/pico-mcp2515) by extensions ['colcon_meta']
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(write/pico-mcp2515) by extension 'colcon_meta'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(write/pico-mcp2515) by extensions ['ros']
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(write/pico-mcp2515) by extension 'ros'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(write/pico-mcp2515) by extensions ['cmake', 'python']
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(write/pico-mcp2515) by extension 'cmake'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(write/pico-mcp2515) by extension 'python'
+[0.158s] DEBUG:colcon.colcon_core.package_identification:Package 'write/pico-mcp2515' with type 'cmake' and name 'pico-mcp2515'
+[0.158s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.158s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.158s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.158s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.158s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.171s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.171s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.172s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 3 installed packages in /home/imori/ros2_ws/install
+[0.173s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 285 installed packages in /opt/ros/jazzy
+[0.173s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.200s] ERROR:colcon:colcon build: Duplicate package names not supported:
+- pico-mcp2515:
+  - pico-mcp2515-main
+  - read/pico-mcp2515
+  - write/pico-mcp2515
